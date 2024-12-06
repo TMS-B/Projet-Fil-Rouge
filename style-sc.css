@@ -1,0 +1,612 @@
+/* .HeaderLargeTitle {
+    font-size: 40px;
+    margin: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.HeaderSubTitle {
+    font-size: 24px;
+    text-align: center;
+} */
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+b {
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+}
+.TextNormal {
+    font-weight: normal;
+}
+.TextLarge {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+.TextLarger {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+img.Icon {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(5779%) hue-rotate(241deg) brightness(79%) contrast(120%);
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+}
+img.IconButton {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(7500%) hue-rotate(180deg) brightness(101%) contrast(114%) drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+}
+img.IconButton:hover {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(381%) hue-rotate(224deg) brightness(87%) contrast(86%);
+}
+button {
+    border-radius: 50px;
+    height: 60px;
+    width: 250px;
+    border: none;
+}
+button:hover {
+    filter: brightness(150%);
+}
+input:focus{
+    outline: none;
+}
+
+body {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: lighter;
+    src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
+    margin: 0;
+    padding: 0;
+    
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: var(--TextColorBright);
+    font-size: 16px;
+
+    --OtherColorPink: #F72585;
+    --BackgroundColorDark: #000000;
+    --TextColorBright: #FFFFFF;
+    --TextColorDark: #000000;
+    --TextColorBrightBlue: #0E1FD8;
+    --ButtonColorBlue: #0E1FD8;
+}
+
+header {
+    width: 100%;
+    background-color: var(--BackgroundColorDark);
+    padding: 0.5em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 4px;
+}
+.HeaderLine {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderLine:nth-child(1) {
+    justify-content: space-between;
+}
+.HeaderLine:nth-child(n+2) {
+    display:none;
+}
+/* .HeaderLine:nth-child(2) {
+    flex-direction: column;
+} */
+/* .HeaderLine:nth-child(1) > :nth-child(1) {
+    display: flex;
+} */
+#HeaderLogo{
+    width: 180px;
+    height: 50px;
+    object-fit: cover;
+}
+.Gender ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* #HeaderCarousel{
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    width: 80%;
+    max-width: 1700px;
+    scrollbar-width: none;
+    mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 95%, rgba(0,0,0,0) 100%);
+    /*C'est ce qui fait que les boutons disparaissent en bout de la ligne
+} */
+
+main {
+    width: 100%;
+    backdrop-filter: blur(16px);
+
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32);
+    background-color: var(--BackgroundColor);
+
+    padding: 16px;
+    box-sizing: border-box;
+}
+#BackgroundLogin{
+    background-color: var(--BackgroundColorDark);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--BackgroundColorDark);
+    padding: 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;       /* Gérer l'espacement de mes div dans le footer (se fait automatiquement) */
+}
+
+
+#FooterReseaux{         /* Disposition de mes icones de Réseaux sociaux */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(68%) saturate(2%) hue-rotate(192deg) brightness(117%) contrast(100%);
+    flex-wrap: wrap;
+}
+
+#FooterReseaux *{           /* Taille de mes icones */
+    width: 40px;
+    height: 40px;
+}
+
+#FooterNewsletter{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+/* Style pour le select et les input dans le footer */
+#FooterNewsletter input, button{
+    color: var(--TextColorBright);
+    font-size: 16px;
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+/* PlaceHolder */
+#FooterNewsletter input::placeholder{
+    color: var(--TextColorDark);
+    opacity: 0.5;
+    font-style: italic;
+}
+#FooterNewsletter span{
+    color: var(--TextColorBright);  
+    font-size: 32px;
+}
+#FooterNewsletter p{
+    font-size: 16px;
+}
+#FooterNewsletter #FooterInputEmail{
+    width: 100%;
+}
+#FooterNewsletter > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#FooterNewsletter > div input{
+    width: 40%;
+}
+
+#FooterMention{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* Déplacé les règles ul/li sur le footer*/
+
+#FooterMention ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2em;
+    padding: 0px;
+}
+#HrNewletter{
+    width: 5%;
+    border: solid 3px var(--TextColorBright);
+}
+#payment img{
+    border-radius: 25px;
+}
+
+.Container{
+    display: flex;
+    background-color: var(--BackgroundColorDark);
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 100px auto;
+    padding: 20px;
+    flex-direction: column;
+    border: solid 1px var(--TextColorBright);
+}
+.Tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    width: 100%;
+}
+.Tabs button {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    background-color: #00000000;
+    color: var(--TextColorBright);
+    transition: color 0.25s;
+}
+.Tabs button:disabled {
+    text-decoration: underline;
+}
+.Tabs button:hover {
+    color: var(--TextColorBrightBlue);
+}
+#Inscription{
+    display: none;
+}
+.FormGroup {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.FormGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.FormGroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+.FormGroup input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--ButtonColorBlue);
+}
+.Btn {
+    color: #FFFFFF;
+    background-color:var(--ButtonColorBlue);
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px 0 20px 0;
+}
+.SocialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(5779%) hue-rotate(241deg) brightness(79%) contrast(120%);
+    margin-bottom: 30px;
+}
+.Container p{
+    margin-bottom: 80px;
+}
+
+#SimpleSearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 50px auto 80px auto;
+    width: 90%;
+    border-radius: 25px;
+    padding: 10px 16px 10px 16px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColorDark);
+}
+#SimpleSearchBar > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#SimpleSearchBar input{
+    flex: 1;
+    background-color: #00000000;
+    border: none;
+    font-size: 20px;
+    color: var(--TextColorBright);
+}
+.trekInfos{
+    display: flex;
+    /* flex-direction: column; */
+    width: 90%;
+    margin: auto auto 70px auto;  
+}
+
+#description div{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+#description > *{
+    margin: 50px;
+}
+#description h2{
+    margin: auto;
+    text-align: center;
+}
+#topologie{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 70px auto;
+}
+
+#topologie img{
+    border-radius: 50px;
+}
+
+#VacationSearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 50px auto 80px auto;
+    width: 90%;
+    border-radius: 25px;
+    padding: 10px 16px 10px 16px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColor);
+}
+#VacationSearchBar > div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+
+.CardList {
+    display: grid;
+    overflow-x: scroll;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
+    margin-bottom: 100px;
+    background-color: var(--BackgroundColor);
+    padding: 16px;
+    box-sizing: border-box;
+}
+.Card {
+    margin: auto;
+    padding: 16px;
+    border-radius: 25px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColor);
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.Card:hover {
+    transition: background-color 0.1s linear;
+    background-color: var(--BackgroundColorDark);
+}
+.CardImgDiv {
+    margin: auto;
+    position: relative;
+    border-radius: 25px;
+    width: 245px;
+    height: 245px;
+    overflow: hidden;
+}
+.CardImgDiv > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 245px;
+    height: 245px;
+}
+.CardImgDiv > p {
+    position: absolute;
+    border-top-left-radius: 25px;
+    padding: 4px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 80px;
+    background-color: var(--ButtonColorRed);
+    text-align: center;
+}
+.Card > p {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.CardTitre {
+    font-size: 20px;
+    font-weight: bold;
+}
+.Carousel {
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+    position: relative;
+}
+.CarouselList {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+}
+.CarouselSlide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.CarouselSlide > img {
+    width: 100%;
+    height: 96%;
+    object-fit: cover;
+}
+.CarouselSlide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.CarouselSlideText {
+    font-weight: bold;
+    text-shadow: rgba(0,0,0,0.16) 1px 1px 2px;
+    color: var(--TextColorBrightOrange);
+}
+.CarouselSlideMiddleText {
+    background-color: var(--BackgroundColorDark);
+    border-radius: 25px;
+    padding: 10px 32px 10px 32px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+}
+.CarouselButtonList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+}
+.CarouselButtonList > a {
+    background-color: var(--TextColorBright);
+    margin: 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    
+}
+
+.Titres {
+    text-align: center;
+    margin: 16px;
+}
+
+@media (min-width: 768px) {
+    img.Icon {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    img.IconButton {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    header {
+        padding: 2em;
+        gap: 16px;
+    }
+    .HeaderLine {
+        height: 150px;
+    }
+    .HeaderLine:nth-child(1) > :nth-child(1) {
+        display:none;
+    }
+    .HeaderLine:nth-child(n+2) {
+        display:flex;
+    }
+    #HeaderLogo{
+        width: 300px;
+        height: 100px;
+    }
+    #FooterNewsletter{
+       max-width: 1000px;
+       width: 90%;
+    }
+    #FooterMention{
+        flex-direction: row;
+        align-items: start;
+        max-width: 1000px;
+        width: 90%;
+    }
+    #Inscription{
+        display: block;
+    }
+    .Container p{
+        display: none;
+    }
+    #VacationSearchBar {
+        flex-direction: row;
+    }
+    #VacationSearchBar > div{
+        border-left: 1px solid var(--BackgroundColorDark);
+        width: auto;
+        flex: 1;
+    }
+    #VacationSearchBar > div:nth-child(1){
+        border-left: none;
+        flex: 2;
+    }
+    #VacationSearchBar > div:nth-child(2){
+        flex: 2;
+    }
+    .CardList {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        background-color: none;
+        background-color: #00000000;
+        overflow: hidden;
+    }
+    
+}
