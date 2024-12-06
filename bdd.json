@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "nom": "Nike Air Max 2024",
+    "prix": 129.99,
+    "description": "Maille respirante, semelle en mousse."
+  },
+  {
+    "id": 2,
+    "nom": "Adidas Ultraboost 23",
+    "prix": 180.00,
+    "description": "Primeknit, semelle Boost en caoutchouc."
+  },
+  {
+    "id": 3,
+    "nom": "Puma Suede Classic",
+    "prix": 75.00,
+    "description": "Daim, semelle en caoutchouc."
+  },
+  {
+    "id": 4,
+    "nom": "Reebok Club C 85",
+    "prix": 85.00,
+    "description": "Cuir, semelle en caoutchouc."
+  },
+  {
+    "id": 5,
+    "nom": "New Balance 990v5",
+    "prix": 175.00,
+    "description": "Mesh, daim, semelle EVA."
+  },
+  {
+    "id": 6,
+    "nom": "Converse Chuck Taylor All Star",
+    "prix": 55.00,
+    "description": "Toile, semelle en caoutchouc."
+  },
+  {
+    "id": 7,
+    "nom": "Under Armour HOVR Phantom 3",
+    "prix": 140.00,
+    "description": "Tricot, semelle HOVR."
+  },
+  {
+    "id": 8,
+    "nom": "Saucony Triumph 20",
+    "prix": 160.00,
+    "description": "Mesh, semelle PWRRUN+."
+  },
+  {
+    "id": 9,
+    "nom": "Vans Old Skool",
+    "prix": 60.00,
+    "description": "Toile, cuir, semelle en caoutchouc."
+  },
+  {
+    "id": 10,
+    "nom": "Fila Disruptor 2",
+    "prix": 70.00,
+    "description": "Cuir synthétique, semelle en caoutchouc."
+  },
+  {
+    "id": 11,
+    "nom": "Asics Gel-Kayano 30",
+    "prix": 160.00,
+    "description": "Mesh, Gel, caoutchouc."
+  },
+  {
+    "id": 12,
+    "nom": "Brooks Ghost 16",
+    "prix": 130.00,
+    "description": "Mesh, semelle BioMoGo DNA."
+  },
+  {
+    "id": 13,
+    "nom": "Nike React Element 55",
+    "prix": 120.00,
+    "description": "Nylon, semelle React."
+  },
+  {
+    "id": 14,
+    "nom": "Adidas NMD_R1",
+    "prix": 140.00,
+    "description": "Primeknit, semelle Boost."
+  },
+  {
+    "id": 15,
+    "nom": "Skechers Go Walk 6",
+    "prix": 80.00,
+    "description": "Mesh, semelle Goga Mat."
+  },
+  {
+    "id": 16,
+    "nom": "Timberland PRO 6\" Pit Boss",
+    "prix": 190.00,
+    "description": "Cuir pleine fleur, semelle en caoutchouc."
+  },
+  {
+    "id": 17,
+    "nom": "Hoka One One Bondi 8",
+    "prix": 160.00,
+    "description": "Mesh, semelle EVA."
+  },
+  {
+    "id": 18,
+    "nom": "Nike Free RN 5.0",
+    "prix": 110.00,
+    "description": "Mesh, semelle Free."
+  },
+  {
+    "id": 19,
+    "nom": "Jordan 1 Retro High OG",
+    "prix": 170.00,
+    "description": "Cuir, caoutchouc."
+  },
+  {
+    "id": 20,
+    "nom": "Nike Air Zoom Pegasus 40",
+    "prix": 120.00,
+    "description": "Mesh, Zoom Air."
+  },
+  {
+    "id": 21,
+    "nom": "Adidas Stan Smith",
+    "prix": 90.00,
+    "description": "Cuir, semelle en caoutchouc."
+  },
+  {
+    "id": 22,
+    "nom": "Reebok Nano X2",
+    "prix": 130.00,
+    "description": "Synthétique, caoutchouc."
+  },
+  {
+    "id": 23,
+    "nom": "On Cloudswift",
+    "prix": 160.00,
+    "description": "Mesh, pods CloudTec."
+  },
+  {
+    "id": 24,
+    "nom": "New Balance Fresh Foam 1080v13",
+    "prix": 160.00,
+    "description": "Mesh, semelle Fresh Foam."
+  },
+  {
+    "id": 25,
+    "nom": "Vans Authentic",
+    "prix": 50.00,
+    "description": "Toile, caoutchouc."
+  },
+  {
+    "id": 26,
+    "nom": "Nike ZoomX Invincible Run",
+    "prix": 180.00,
+    "description": "Mesh, ZoomX."
+  },
+  {
+    "id": 27,
+    "nom": "Salomon Speedcross 6",
+    "prix": 130.00,
+    "description": "Textile, semelle Contagrip."
+  },
+  {
+    "id": 28,
+    "nom": "Saucony Kinvara 15",
+    "prix": 120.00,
+    "description": "Mesh, semelle PowerRun."
+  },
+  {
+    "id": 29,
+    "nom": "Nike Blazer Mid '77 Vintage",
+    "prix": 100.00,
+    "description": "Cuir, caoutchouc."
+  },
+  {
+    "id": 30,
+    "nom": "Adidas Superstar",
+    "prix": 85.00,
+    "description": "Cuir, caoutchouc."
+  },
+  {
+    "id": 31,
+    "nom": "Asics Gel-Nimbus 25",
+    "prix": 160.00,
+    "description": "Mesh, Gel, caoutchouc."
+  },
+  {
+    "id": 32,
+    "nom": "Under Armour Charged Rogue 3",
+    "prix": 110.00,
+    "description": "Mesh, semelle Charged Cushioning."
+  },
+  {
+    "id": 33,
+    "nom": "Puma RS-X3 Puzzle",
+    "prix": 120.00,
+    "description": "Cuir, textile, caoutchouc."
+  },
+  {
+    "id": 34,
+    "nom": "Reebok Zig Kinetica II",
+    "prix": 140.00,
+    "description": "Synthétique, semelle ZigTech."
+  },
+  {
+    "id": 35,
+    "nom": "Nike Zoom Fly 4",
+    "prix": 150.00,
+    "description": "Mesh, ZoomX, caoutchouc."
+  },
+  {
+    "id": 36,
+    "nom": "Hoka One One Clifton 9",
+    "prix": 140.00,
+    "description": "Mesh, semelle EVA."
+  },
+  {
+    "id": 37,
+    "nom": "New Balance 5740",
+    "prix": 100.00,
+    "description": "Cuir, textile, semelle en caoutchouc."
+  },
+  {
+    "id": 38,
+    "nom": "Vans Sk8-Hi",
+    "prix": 75.00,
+    "description": "Toile, cuir, semelle en caoutchouc."
+  },
+  {
+    "id": 39,
+    "nom": "Salomon XA Pro 3D V8",
+    "prix": 130.00,
+    "description": "Synthétique, textile, semelle Contagrip."
+  },
+  {
+    "id": 40,
+    "nom": "Adidas ZX 750",
+    "prix": 110.00,
+    "description": "Cuir, synthétique, caoutchouc."
+  },
+  {
+    "id": 41,
+    "nom": "Asics Gel-Cumulus 25",
+    "prix": 130.00,
+    "description": "Mesh, Gel, caoutchouc."
+  },
+  {
+    "id": 42,
+    "nom": "Nike Air Force 1 '07",
+    "prix": 90.00,
+    "description": "Cuir, caoutchouc."
+  },
+  {
+    "id": 43,
+    "nom": "Puma Future Rider",
+    "prix": 80.00,
+    "description": "Synthétique, caoutchouc."
+  },
+  {
+    "id": 44,
+    "nom": "Under Armour Project Rock 4",
+    "prix": 120.00,
+    "description": "Mesh, caoutchouc."
+  },
+  {
+    "id": 45,
+    "nom": "Reebok Classic Leather",
+    "prix": 90.00,
+    "description": "Cuir, caoutchouc."
+  },
+  {
+    "id": 46,
+    "nom": "On Cloudrunner",
+    "prix": 150.00,
+    "description": "Mesh, pods CloudTec."
+  },
+  {
+    "id": 47,
+    "nom": "Brooks Adrenaline GTS 24",
+    "prix": 140.00,
+    "description": "Mesh, semelle DNA LOFT."
+  },
+  {
+    "id": 48,
+    "nom": "New Balance 860v12",
+    "prix": 130.00,
+    "description": "Mesh, EVA, caoutchouc."
+  },
+  {
+    "id": 49,
+    "nom": "Nike React Infinity Run",
+    "prix": 160.00,
+    "description": "Mesh, React, caoutchouc."
+  },
+  {
+    "id": 50,
+    "nom": "Adidas Pureboost 22",
+    "prix": 140.00,
+    "description": "Primeknit, Boost, caoutchouc."
+  }
+]
