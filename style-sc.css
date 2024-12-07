@@ -43,8 +43,8 @@ img.Icon {
 }
 img.IconButton {
     filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(7500%) hue-rotate(180deg) brightness(101%) contrast(114%) drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin: 4px;
 }
 img.IconButton:hover {
@@ -107,24 +107,16 @@ header {
 .HeaderLine:nth-child(1) {
     justify-content: space-between;
 }
-.HeaderLine:nth-child(n+2) {
-    display:none;
-}
-/* .HeaderLine:nth-child(2) {
+ .HeaderLine:nth-child(4) {
     flex-direction: column;
-} */
-/* .HeaderLine:nth-child(1) > :nth-child(1) {
-    display: flex;
-} */
+}
 #HeaderLogo{
     width: 180px;
     height: 50px;
     object-fit: cover;
 }
-.Gender ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.Gender {
+    display: none;
 }
 /* #HeaderCarousel{
     display: flex;
@@ -139,9 +131,6 @@ header {
 
 main {
     width: 100%;
-    backdrop-filter: blur(16px);
-
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32);
     background-color: var(--BackgroundColor);
 
     padding: 16px;
@@ -150,11 +139,10 @@ main {
 #BackgroundLogin{
     background-color: var(--BackgroundColorDark);
 }
-
 footer {
     width: 100%;
     background-color: var(--BackgroundColorDark);
-    padding: 16px;
+    /* padding: 16px; */
     box-sizing: border-box;
 
     display: flex;
@@ -163,23 +151,31 @@ footer {
     gap: 3em;       /* Gérer l'espacement de mes div dans le footer (se fait automatiquement) */
 }
 
-
-#FooterReseaux{         /* Disposition de mes icones de Réseaux sociaux */
+#FooterReseauxDesktop{
+    display: none;
+}
+#FooterReseauxMobile {         /* Disposition de mes icones de Réseaux sociaux */
     display: flex;
     width: 100%;
     justify-content: space-around;
+    flex-direction: column;
     margin-top: 20px;
     align-items: center;
     filter: brightness(0) saturate(100%) invert(99%) sepia(68%) saturate(2%) hue-rotate(192deg) brightness(117%) contrast(100%);
     flex-wrap: wrap;
+    gap: 1em;
 }
-
-#FooterReseaux *{           /* Taille de mes icones */
+#SocialMedia{       /*Gère la disposition/l'espacement de mes icons sur mobile*/
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+#FooterReseauxMobile img{           /* Taille de mes icones */
     width: 40px;
     height: 40px;
 }
 
-#FooterNewsletter{
+#FooterNewsletter{      /*Ma partie newletter du "hr" jusqu'à la barre de mail*/
     width: 96%;
     display: flex;
     justify-content: space-between;
@@ -189,12 +185,11 @@ footer {
 }
 /* Style pour le select et les input dans le footer */
 #FooterNewsletter input, button{
-    color: var(--TextColorBright);
+    color: var(--TextColorDark);
     font-size: 16px;
     height: 50px;
     padding-left: 16px;
     padding-right: 16px;
-    margin: 8px;
     box-sizing: border-box;
 }
 /* PlaceHolder */
@@ -221,17 +216,60 @@ footer {
 #FooterNewsletter > div input{
     width: 40%;
 }
+#FooterMentionMobile{
+    text-align: center;
+    width: 100%;
+}
+#FooterMentionMobile details{
+    margin-bottom: 32px;
+}
+#FooterMentionMobile details > summary {
+    list-style: none;
+    position: relative;
+    width: auto;
+    max-width: 320px;
+    margin: auto;
+}
+#FooterMentionMobile details > summary::after {
+    position: absolute;
+    right: 0%;
+    content: ' ►';
+}
+#FooterMentionMobile details[open] summary:after {
+    position: absolute;
+    right: 0%;
+    content: " ▼";
+}
 
-#FooterMention{
+#FooterMentionDesktop {
+    display: none;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    max-width: 1000px;
+    width: 90%;
+}
+#FooterMentionDesktop li{
+    list-style-type: none;
+}
+#FooterMentionDesktop ul{
+    text-align: center;
+    line-height: 2em;
+    padding: 0px;
+}
+/* #FooterMentionDesktop{
+    display: none;
+}
+#FooterMentionMobile{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-/* Déplacé les règles ul/li sur le footer*/
+} */
 
-#FooterMention ul{
+/* Déplacé les règles ul/li sur le footer*/
+#FooterMentionMobile ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,23 +277,21 @@ footer {
     padding: 0px;
 }
 #HrNewletter{
-    width: 5%;
-    border: solid 3px var(--TextColorBright);
+    width: 20%;
+    border: solid 1px var(--TextColorBright);
+    border-radius: 10px;
 }
-#payment img{
-    border-radius: 25px;
-}
-
-.Container{
+.Container{     /*fenêtre au centre pour se connecter ou s'inscrire*/
     display: flex;
     background-color: var(--BackgroundColorDark);
     max-width: 600px;
     justify-content: center;
     align-items: center;
-    margin: 100px auto 100px auto;
+    margin: 100px auto 200px auto;
     padding: 20px;
     flex-direction: column;
     border: solid 1px var(--TextColorBright);
+    border-radius: 10px;
 }
 .Tabs {
     display: flex;
@@ -314,12 +350,22 @@ footer {
     cursor: pointer;
     margin: 50px 0 20px 0;
 }
+#Subscribe{
+    color: #FFFFFF;
+    background-color:var(--ButtonColorBlue);
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0px;
+}
 .SocialIcons {
     display: flex;
     justify-content: center;
     gap: 90px;
     filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(5779%) hue-rotate(241deg) brightness(79%) contrast(120%);
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 .Container p{
     margin-bottom: 80px;
@@ -480,7 +526,6 @@ footer {
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
-
     scroll-behavior: smooth;
 }
 .CarouselSlide {
@@ -549,16 +594,16 @@ footer {
         margin: 16px;
     }
     img.IconButton {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         margin: 16px;
+    }
+    #Burger{
+        display: none;
     }
     header {
         padding: 2em;
         gap: 16px;
-    }
-    .HeaderLine {
-        height: 150px;
     }
     .HeaderLine:nth-child(1) > :nth-child(1) {
         display:none;
@@ -567,18 +612,35 @@ footer {
         display:flex;
     }
     #HeaderLogo{
-        width: 300px;
+        width: 200px;
         height: 100px;
+    }
+
+    #FooterReseauxMobile{
+        display: none;
+    }
+    #FooterReseauxDesktop{         /* Disposition de mes icones de Réseaux sociaux */
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 20px;
+        align-items: center;
+        filter: brightness(0) saturate(100%) invert(99%) sepia(68%) saturate(2%) hue-rotate(192deg) brightness(117%) contrast(100%);
+        flex-wrap: wrap;
+    }
+    
+    #FooterReseauxDesktop img{           /* Taille de mes icones */
+        width: 40px;
+        height: 40px;
     }
     #FooterNewsletter{
        max-width: 1000px;
        width: 90%;
     }
-    #FooterMention{
-        flex-direction: row;
-        align-items: start;
-        max-width: 1000px;
-        width: 90%;
+    #HrNewletter{
+        width: 8%;
+        border: solid 1px var(--TextColorBright);
+        border-radius: 10px;
     }
     #Inscription{
         display: block;
@@ -609,4 +671,29 @@ footer {
         overflow: hidden;
     }
     
+}
+@media (min-width: 900px){
+    #FooterMentionDesktop {
+        display: flex;
+    }
+    #FooterMentionMobile {
+        display: none;
+    }
+    #FooterMentionDesktop{
+        flex-direction: row;
+        align-items: start;
+        max-width: 1000px;
+        width: 90%;
+    }
+    .Gender{
+        display: inline;
+        width: 50%;
+        
+    }
+    .Gender ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1em;
+    }
 }
