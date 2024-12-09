@@ -49,15 +49,16 @@ button {
 }
 button:hover {
     filter: brightness(150%);
+    cursor: pointer;
 }
 input:focus{
     outline: none;
 }
 
 body {      /*Caractéristiques de mon body*/
-    font-family: "GolosText-Black.ttf";
+    font-family: "Cantarell", sans-serif;
     font-weight: lighter;
-    src: url('../fonts/Golos_Text/static/GolosText-Black.ttf') format('truetype');
+    src: url('../fonts/Cantarell/Cantarell-Regular.ttf') format('truetype');
     margin: 0;
     padding: 0;
     
@@ -85,6 +86,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border-bottom: solid 1px var(--TextColorBright);
+
 }
 .HeaderLine {
     height: 80px;
@@ -98,10 +101,13 @@ header {
  .HeaderLine:nth-child(4) {
     flex-direction: column;
 }
-#HeaderLogo{        /*Logo du site*/
-    width: 180px;
-    height: 50px;
-    object-fit: cover;
+#HeaderLogoMobile{        /*Logo du site*/
+    /* width: 180px; */
+    height: 100px;
+    /* object-fit: cover; */
+}
+#HeaderLogoDesktop{        /*Logo du site*/
+    display: none;
 }
 .Gender {       /* Menu de séléction au centre du header "Homme,Femme,Enfant,Sport" */
     display: none;
@@ -182,7 +188,7 @@ main {
     border-radius: 50%;
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);  
 }
-.CardList {
+/* .CardList {
     display: flex;
     justify-content: center;
     overflow-x: scroll;
@@ -193,37 +199,52 @@ main {
     background-color: var(--BackgroundColor);
     padding: 16px;
     box-sizing: border-box;
-}
-.Card {
-    border-radius: 25px;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    color: var(--TextColorBright);
+} */
+
+.CardList {
+    display: grid;
+    overflow-x: scroll;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
     background-color: var(--BackgroundColor);
-    width: 250px;
-    height: 180px;
-    overflow: hidden;
+    padding: 16px;
     box-sizing: border-box;
 }
+.Card {
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: var(--TextColorDark);
+}
+
 .Card:hover {
     transition: background-color 0.1s linear;
     background-color: var(--BackgroundColorDark);
+    color: var(--TextColorBright);
 }
-/* .CardImgDiv {
+.CardImgDiv {
     margin: auto;
     position: relative;
     border-radius: 25px;
     width: 245px;
     height: 245px;
     overflow: hidden;
-} */
-/* .CardImgDiv > img {
+}
+.CardImgDiv > img {
     position: absolute;
     left: 0;
     top: 0;
     object-fit: cover;
     width: 245px;
     height: 245px;
-} */
+}
 .CardImgDiv > p {
     position: absolute;
     border-top-left-radius: 25px;
@@ -245,10 +266,60 @@ main {
     font-weight: bold;
 }
 
-/* .Titres {
+/*CSS de la page article*/
+#CardContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin: 50px;
+    }
+    
+    
+
+#PrevNext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#PrevNext button{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--BackgroundColorDark);
+}
+#PrevNext img{
+    filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(7500%) hue-rotate(212deg) brightness(106%) contrast(101%);
+    width: 20px;
+    height: 20px;
+}
+#PrevNext input {
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+#PrevNext input:focus{
+    outline: none;
+}
+/* Permet de supprimer les fleches de l'input sur Firefox */
+#WherePage[type=number] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+/* Permet de supprimer les fleches de l'input sur Chrome */
+#WherePage::-webkit-inner-spin-button,
+#WherePage::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+#WherePage{
+    width: 100px;
     text-align: center;
-    margin: 16px;
-} */
+    font-weight: bolder;
+}
 
 /*CSS de la page login*/
 
@@ -258,11 +329,9 @@ main {
     max-width: 600px;
     justify-content: center;
     align-items: center;
-    margin: 100px auto 200px auto;
+    margin: 100px auto 100px auto;
     padding: 20px;
     flex-direction: column;
-    border: solid 1px var(--TextColorBright);
-    border-radius: 10px;
 }
 .Tabs {
     display: flex;
@@ -356,21 +425,12 @@ main {
     background-color: var(--BackgroundColorDark);
 }
 
-
-
-
-
-
-
-
-
-
-
 footer {
     width: 100%;
     background-color: var(--BackgroundColorDark);
     /* padding: 16px; */
     box-sizing: border-box;
+    border-top: solid 1px var(--TextColorBright);
 
     display: flex;
     align-items: center;
@@ -394,12 +454,14 @@ footer {
 }
 #SocialMedia{       /*Gère la disposition/l'espacement de mes icons sur mobile*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 90%;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 #FooterReseauxMobile img{           /* Taille de mes icones */
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 #FooterNewsletter{      /*Ma partie newletter du "hr" jusqu'à la barre de mail*/
@@ -428,9 +490,12 @@ footer {
 #FooterNewsletter span{
     color: var(--TextColorBright);  
     font-size: 32px;
+    font-weight: 400;
 }
 #FooterNewsletter p{
     font-size: 16px;
+    /* padding: 10px; */
+    text-align: center;
 }
 #FooterNewsletter #FooterInputEmail{
     width: 100%;
@@ -499,74 +564,6 @@ footer {
 }
 
 
-
-
-/* 
-#SimpleSearchBar > div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-#SimpleSearchBar input{
-    flex: 1;
-    background-color: #00000000;
-    border: none;
-    font-size: 20px;
-    color: var(--TextColorBright);
-}
-.trekInfos{
-    display: flex;
-    flex-direction: column; 
-    width: 90%;
-    margin: auto auto 70px auto;  
-}
-
-#description div{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-
-}
-#description > *{
-    margin: 50px;
-}
-#description h2{
-    margin: auto;
-    text-align: center;
-}
-#topologie{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: auto auto 70px auto;
-}
-
-#topologie img{
-    border-radius: 50px;
-}
-
-#VacationSearchBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin: 50px auto 80px auto;
-    width: 90%;
-    border-radius: 25px;
-    padding: 10px 16px 10px 16px;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    color: var(--TextColorBright);
-    background-color: var(--BackgroundColor);
-}
-#VacationSearchBar > div{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-} */
-
 @media (min-width: 768px) {
     img.Icon {
         width: 40px;
@@ -591,9 +588,13 @@ footer {
     .HeaderLine:nth-child(n+2) {
         display:flex;
     }
-    #HeaderLogo{
+    #HeaderLogoDesktop{     /*Logo du site pour PC*/
+        display: inline;
         width: 200px;
-        height: 100px;
+        height: 180px;
+    }
+    #HeaderLogoMobile{        /*Logo du site pour mobile*/
+        display: none;
     }
     #Inscription{
         display: block;

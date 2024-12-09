@@ -6,11 +6,10 @@
     
 
     <link rel="shortcut icon" href="../Image/fav.png" type="image/x-icon">
-    <meta name="description" content="Vous recherchez un moyen de faciliter ...">
     <link rel="stylesheet" href="../styles/style-sc.css">
     <script src="/main.js" defer></script>
 
-    <title>Accueil - Step'Up Custom</title>
+    <title>Article - Step'Up Custom</title>
 
 </head>
 <header>
@@ -18,7 +17,8 @@
         <div>
             <img src="../icons/list.svg" alt="Icône Menu Burger" class="IconButton">
         </div>
-        <img src="../Image/stepup2-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogo">
+        <img src="../Image/stepup2-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogoDesktop">
+            <img src="../Image/stepup-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogoMobile">
         <div class="Gender">
             <ul>
                 <li>Homme</li>
@@ -28,131 +28,30 @@
             </ul>
         </div>
         <div>
-            <img src="../icons/search.svg" alt="Icône Recherche" class="IconButton">
+            <div id="Search">
+                <input id="SearchInput" type="text" placeholder="Rechercher">
+                <img src="../icons/search.svg" alt="Icône Recherche" class="IconButton">
+            </div>
             <img src="../icons/cart.svg" alt="Icône Panier" class="IconButton">
             <img src="../icons/person.svg" alt="Icône Compte" class="IconButton">
         </div> 
     </div>
 </header>
     <main>
-        <div class="Carousel">
-            <div class="CarouselList">
-                <div class="CarouselSlide" id="DecouverteSlide1">
-                    <img src="../Image/CommercialPush-9060_CompA-Desktop.webp" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">img1</p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="DecouverteSlide2">
-                    <img src="../Image/CommercialPush-9060_CompA-Desktop.webp" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">img2</p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="DecouverteSlide3">
-                    <img src="../Image/CommercialPush-9060_CompA-Desktop.webp" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">img3</p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="DecouverteSlide4">
-                    <img src="../Image/CommercialPush-9060_CompA-Desktop.webp" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">img4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="CarouselButtonList">
-                <a href="#DecouverteSlide1"></a>
-                <a href="#DecouverteSlide2"></a>
-                <a href="#DecouverteSlide3"></a>
-                <a href="#DecouverteSlide4"></a>
-            </div>
+        <div id="CardContainer">
+            
         </div>
-        <div class="CardList">
-            <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../Image/AIR+JORDAN+1+MID+SE.png" alt="Image Card">
-                </div>
+        <!-- <div class="Card">
+            <div class="CardImgDiv">
+                <img src="../Image/AIR-JORDAN-1-MID-SE.webp" alt="Image Card">
             </div>
-            <!-- <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../images/moinzon mountains-1412683_1920.png" alt="Image Card">
-                    <p>Dès <span class="TextLarge">300€</span></p>
-                </div>
-                <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-                <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-            </div> -->
-            <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../images/background-7277773_1920.jpg" alt="Image Card">
-                    <p>Dès <span class="TextLarge">300€</span></p>
-                </div>
-                <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-                <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-            </div>
-            <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../images/istockphoto-1872852649-1024x1024.jpg" alt="Image Card">
-                    <p>Dès <span class="TextLarge">300€</span></p>
-                </div>
-                <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-                <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-            </div>
-            <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../images/istockphoto-1783754915-1024x1024.jpg" alt="Image Card">
-                    <p>Dès <span class="TextLarge">300€</span></p>
-                </div>
-                <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-                <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-            </div>
-            <div class="Card">
-                <div class="CardImgDiv">
-                    <img src="../images/istockphoto-96418914-1024x1024.jpg" alt="Image Card">
-                    <p>Dès <span class="TextLarge">300€</span></p>
-                </div>
-                <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-                <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-            </div>
-        </div>
-        <div class="Titres">
-            <div class="TextNormal">Nos offres les plus</div>
-            <div class="TextLarger">Populaires</div>
-        </div>
-        <div class="Carousel">
-            <div class="CarouselList">
-                <div class="CarouselSlide" id="PopulaireSlide1">
-                    <img src="../images/cliffs-6998764_1920.jpg" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="PopulaireSlide2">
-                    <img src="images/istockphoto-96418914-1024x1024.jpg" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="PopulaireSlide3">
-                    <img src="images/istockphoto-1872852649-1024x1024.jpg" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
-                    </div>
-                </div>
-                <div class="CarouselSlide" id="PopulaireSlide4">
-                    <img src="images/background-7277773_1920.jpg" alt="Image Carousel">
-                    <div>
-                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="CarouselButtonList">
-                <a href="#PopulaireSlide1"></a>
-                <a href="#PopulaireSlide2"></a>
-                <a href="#PopulaireSlide3"></a>
-                <a href="#PopulaireSlide4"></a>
-            </div>
+            <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
+            <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
+        </div> -->
+        <div id="PrevNext">
+            <button id="PreviousBtn"><img src="../icons/arrow-left.svg" alt="Bouton Précédent"></button>
+            <input type="number" name="number" id="WherePage" placeholder="/">
+            <button id="NextBtn"><img src="../icons/arrow-right.svg" alt="Bouton Suivant"></button> 
         </div>
     </main>
     <footer>
@@ -223,16 +122,16 @@
             </details>
             <details>
                 <summary><b>Extras</b></summary>
-                <p>Gift Certificates</p>
-                <p>Brands</p>
-                <p>Afiliates</p>
-                <p>Specials</p>
+                <p>Code promo</p>
+                <p>Marques associées</p>
+                <p>Partenariat</p>
+                <p>Editions Limitées</p>
             </details>
             <details>
-                <summary><b>My account</b></summary>
-                <p>My account</p>
-                <p>Order History</p>
-                <p>Whish list</p>
+                <summary><b>Mon espace</b></summary>
+                <p>Mon compte</p>
+                <p>Historique de commandes</p>
+                <p>Liste de souhait</p>
                 <p>Newletters</p>
             </details>
             <details>
