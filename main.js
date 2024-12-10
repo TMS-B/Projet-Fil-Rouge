@@ -1,4 +1,4 @@
-// /*
+
 let NextButton = document.getElementById("NextBtn");
 let PreviousButton = document.getElementById("PreviousBtn");
 let CardContainer = document.getElementById("CardContainer");

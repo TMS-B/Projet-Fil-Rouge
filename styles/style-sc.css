@@ -14,18 +14,10 @@ b {
 ul{
     list-style-type: none;
 }
-/* .TextNormal {
-    font-weight: normal;
+a{
+    text-decoration: none;
+    color: var(--TextColorBright);
 }
-.TextLarge {
-    font-size: 1.5em;
-    font-weight: normal;
-}
-.TextLarger {
-    font-size: 2em;
-    font-weight: normal;
-} */
-
 img.Icon {
     filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(5779%) hue-rotate(241deg) brightness(79%) contrast(120%);
     width: 40px;
@@ -102,9 +94,7 @@ header {
     flex-direction: column;
 }
 #HeaderLogoMobile{        /*Logo du site*/
-    /* width: 180px; */
     height: 100px;
-    /* object-fit: cover; */
 }
 #HeaderLogoDesktop{        /*Logo du site*/
     display: none;
