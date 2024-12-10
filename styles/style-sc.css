@@ -188,19 +188,6 @@ main {
     border-radius: 50%;
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);  
 }
-/* .CardList {
-    display: flex;
-    justify-content: center;
-    overflow-x: scroll;
-    width: 100%;
-    margin: auto;
-    gap: 32px;
-    margin-bottom: 100px;
-    background-color: var(--BackgroundColor);
-    padding: 16px;
-    box-sizing: border-box;
-} */
-
 .CardList {
     display: grid;
     overflow-x: scroll;
@@ -223,7 +210,6 @@ main {
     box-sizing: border-box;
     color: var(--TextColorDark);
 }
-
 .Card:hover {
     transition: background-color 0.1s linear;
     background-color: var(--BackgroundColorDark);
@@ -267,6 +253,7 @@ main {
 }
 
 /*CSS de la page article*/
+
 #CardContainer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -274,9 +261,7 @@ main {
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     margin: 50px;
-    }
-    
-    
+}
 
 #PrevNext{
     display: flex;
@@ -379,7 +364,7 @@ main {
     outline: none;
     border-bottom: 1px solid var(--ButtonColorBlue);
 }
-.Btn {
+.Btn {      /*Caractéristiques de mon button de connection*/
     color: #FFFFFF;
     background-color:var(--ButtonColorBlue);
     padding: 15px;
@@ -389,6 +374,20 @@ main {
     font-weight: bold;
     cursor: pointer;
     margin: 50px 0 20px 0;
+}
+#Connect{
+    border-radius: 50px;
+    height: 50px;
+    width: 250px;
+    border: none;
+}
+#Connect:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+#ErrorMessage{
+    color: red;
+    font-weight: bold;
 }
 #Subscribe{
     color: #FFFFFF;
@@ -410,7 +409,7 @@ main {
     margin-bottom: 80px;
 }
 
-#SimpleSearchBar {
+/* #SimpleSearchBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -423,7 +422,7 @@ main {
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
     color: var(--TextColorBright);
     background-color: var(--BackgroundColorDark);
-}
+} */
 
 footer {
     width: 100%;

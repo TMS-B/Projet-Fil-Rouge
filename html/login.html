@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../Image/fav.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../styles/style-sc.css">
-    <script src="main.js" defer></script>
+    <script src="../login.js"defer></script>
     <title>Login - Step'Up Custom</title>
 </head>
 <body id="BackgroundLogin">
@@ -38,15 +38,19 @@
                 <button disabled>CONNEXION</button>
                 <button id="Inscription">INSCRIPTION</button>
             </div>
-            <div class="FormGroup">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="email" id="username">
-            </div>
-            <div class="FormGroup">
-                <label for="password">Mot de passe</label>
-                <input type="password">
-            </div>
-            <button class="Btn">CONNEXION</button>
+            <form id="FormLogin">
+                <div class="FormGroup">
+                    <label for="username">Adresse mail</label>
+                    <input type="email" id="Username" name="UserName" >
+                </div>
+                <div class="FormGroup">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="Password" name="UserPass" >
+                </div>
+                <div id="ErrorMessage">
+                </div>
+                <input type="submit" class="Btn" id="Connect" value="CONNEXION">
+            </form>
             <p><i>S'inscrire</i></p>
             <div class="SocialIcons">
                 <img width="35px" height="35px" src="../icons/google.svg" alt="logo connexion google">

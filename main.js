@@ -7,7 +7,7 @@ let NumbersOfItems = 16;
 let firstDisplay = 0;
 let lastDisplay = firstDisplay + NumbersOfItems;
 let Results;
-let evolutions = "";
+// let evolutions = "";
 
 async function SearchShoes() {
     lastDisplay = firstDisplay + NumbersOfItems;
@@ -16,6 +16,7 @@ async function SearchShoes() {
         const res = await fetch("../bdd.json");
         const json = await res.json();
         Results = json;
+        console.log(Results)
     } catch (error) {
         console.error("Erreur lors du chargement du fichier JSON", error);
     }
@@ -97,4 +98,4 @@ async function SearchBar(e) {
         ShowShoes();
     })
     .catch ((error) => console.error("Visiblement ca ne fonctionne pas", error))  
-}
+}    
