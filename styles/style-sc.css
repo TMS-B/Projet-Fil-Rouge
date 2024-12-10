@@ -388,6 +388,7 @@ main {
 #ErrorMessage{
     color: red;
     font-weight: bold;
+    text-align: center;
 }
 #Subscribe{
     color: #FFFFFF;

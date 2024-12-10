@@ -28,7 +28,8 @@
             <div>
                 <img src="../icons/search.svg" alt="Icône Recherche" class="IconButton">
                 <img src="../icons/cart.svg" alt="Icône Panier" class="IconButton">
-                <img src="../icons/person.svg" alt="Icône Compte" class="IconButton">
+                <div id="ShowAccount">
+                </div>
             </div>
         </div>
     </header>
@@ -40,17 +41,17 @@
             </div>
             <form id="FormLogin">
                 <div class="FormGroup">
-                    <label for="username">Adresse mail</label>
-                    <input type="email" id="Username" name="UserName" >
+                    <label for="Username">Adresse mail</label>
+                    <input type="email" id="Username">
                 </div>
                 <div class="FormGroup">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="Password" name="UserPass" >
-                </div>
-                <div id="ErrorMessage">
+                    <label for="Password">Mot de passe</label>
+                    <input type="password" id="Password">
                 </div>
                 <input type="submit" class="Btn" id="Connect" value="CONNEXION">
             </form>
+            <div id="ErrorMessage">
+            </div>
             <p><i>S'inscrire</i></p>
             <div class="SocialIcons">
                 <img width="35px" height="35px" src="../icons/google.svg" alt="logo connexion google">

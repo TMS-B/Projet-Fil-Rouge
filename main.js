@@ -3,11 +3,11 @@ let NextButton = document.getElementById("NextBtn");
 let PreviousButton = document.getElementById("PreviousBtn");
 let CardContainer = document.getElementById("CardContainer");
 let SearchInput = document.getElementById("SearchInput");
+let ShowAccount = document.getElementById("ShowAccount")
 let NumbersOfItems = 16;
 let firstDisplay = 0;
 let lastDisplay = firstDisplay + NumbersOfItems;
 let Results;
-// let evolutions = "";
 
 async function SearchShoes() {
     lastDisplay = firstDisplay + NumbersOfItems;
@@ -89,7 +89,6 @@ async function SearchBar(e) {
     })
    
     .then (json => {
-        console.log(json)
         Results = json.filter((element) => {
             return(element.nom.toLowerCase().includes(searchString.toLowerCase()));
         });
@@ -98,4 +97,24 @@ async function SearchBar(e) {
         ShowShoes();
     })
     .catch ((error) => console.error("Visiblement ca ne fonctionne pas", error))  
-}    
+}
+
+
+
+function HelloUser(){
+    let AccountData = JSON.parse(localStorage.getItem("SC_account")).username;
+
+    if(AccountData == undefined){
+        return;
+    }else{
+        console.log(ShowAccount)
+        ShowAccount.innerHTML = `
+        <div class="AccountName">
+            <span>Bonjour<br>${AccountData}</span>
+        </div>
+        <div class="AccountImg">
+            <img src="../icons/person.svg" alt="Icône Compte" class="IconButton">
+        </div>`  
+    }
+}
+HelloUser();
