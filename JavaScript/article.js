@@ -5,7 +5,7 @@ let CardContainer = document.getElementById("CardContainer");
 
 let NumbersOfItems = 16;
 let FirstDisplay = 0;
-let LastDisplay = firstDisplay + NumbersOfItems;
+let LastDisplay = FirstDisplay + NumbersOfItems;
 let Results;
 
 let SearchInput = document.getElementById("SearchInput");

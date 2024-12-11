@@ -104,7 +104,7 @@ header {
     height: 30px;
     cursor: pointer;
     border-radius: 0px;
-    /* background-color: var(--BackgroundColorDark); */
+    background-color: var(--BackgroundColorDark);
 }
 
 #Gender {       /* Menu de séléction au centre du header "Homme,Femme,Enfant,Sport" */
@@ -165,6 +165,12 @@ header {
 .RightHead input{
     width: 100px;
     height: 25px;
+}
+.Ariane{
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    color: var(--TextColorDark);
 }
 main {
     width: 100%;
