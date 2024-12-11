@@ -4,24 +4,24 @@ let PreviousButton = document.getElementById("PreviousBtn");
 let CardContainer = document.getElementById("CardContainer");
 
 let NumbersOfItems = 16;
-let firstDisplay = 0;
-let lastDisplay = firstDisplay + NumbersOfItems;
+let FirstDisplay = 0;
+let LastDisplay = firstDisplay + NumbersOfItems;
 let Results;
 
 let SearchInput = document.getElementById("SearchInput");
 let ShowAccount = document.getElementById("ShowAccount")
 
-const urlDeLaFenetre = window.location.search;
-const lesParametresGet = new URLSearchParams(urlDeLaFenetre);
-const Value = lesParametresGet.get("Search");
+const UrlDeLaFenetre = window.location.search;
+const LesParametresGet = new URLSearchParams(UrlDeLaFenetre);
+const Value = LesParametresGet.get("Search");
 console.log(Value)
 
 
 
 
 async function SearchShoes() {
-    lastDisplay = firstDisplay + NumbersOfItems;
-    firstDisplay = 0;
+    LastDisplay = FirstDisplay + NumbersOfItems;
+    FirstDisplay = 0;
     try {
         const res = await fetch("../bdd.json");
         const json = await res.json();
@@ -34,7 +34,7 @@ async function SearchShoes() {
 
 function ShowShoes(){
     CardContainer.innerHTML = ``;
-        for (let i = firstDisplay; i < lastDisplay; i++){
+        for (let i = FirstDisplay; i < LastDisplay; i++){
         let Card = document.createElement("div");
         Card.id = i;
         Card.innerHTML = 
@@ -59,17 +59,17 @@ window.onload = async () => {
 }
 
 PreviousButton.addEventListener('click', () =>{
-    if (firstDisplay != 0){
-        firstDisplay -= NumbersOfItems;
-        lastDisplay -= NumbersOfItems;
+    if (FirstDisplay != 0){
+        FirstDisplay -= NumbersOfItems;
+        LastDisplay -= NumbersOfItems;
         ShowShoes();
     }
 });
 
 NextButton.addEventListener('click', () =>{
-    if (lastDisplay < Results.length){
-        firstDisplay += NumbersOfItems;
-        lastDisplay += NumbersOfItems;
+    if (LastDisplay < Results.length){
+        FirstDisplay += NumbersOfItems;
+        LastDisplay += NumbersOfItems;
         ShowShoes(); 
     }
 });
@@ -77,7 +77,7 @@ NextButton.addEventListener('click', () =>{
 // SearchInput.addEventListener("keyup", SearchBar)
 
 async function SearchBar(e) {
-    let searchString = Value.toLowerCase().replace(/\s/g, "");
+    let SearchString = Value.toLowerCase().replace(/\s/g, "");
     CardContainer.innerHTML = "";
     fetch ("../bdd.json")
     .then (data => {
@@ -91,10 +91,10 @@ async function SearchBar(e) {
    
     .then (json => {
         Results = json.filter((element) => {
-            return(element.nom.toLowerCase().includes(searchString.toLowerCase()));
+            return(element.nom.toLowerCase().includes(SearchString.toLowerCase()));
         });
-        lastDisplay = Results.length;
-        firstDisplay = 0;
+        LastDisplay = Results.length;
+        FirstDisplay = 0;
         console.log(Results)
         ShowShoes();
     })
