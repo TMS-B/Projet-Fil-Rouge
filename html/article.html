@@ -7,48 +7,42 @@
 
     <link rel="shortcut icon" href="../Image/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/style-sc.css">
+    <script src="/article.js" defer></script>
     <script src="/main.js" defer></script>
 
     <title>Article - Step'Up Custom</title>
 
 </head>
-<header>
-    <div class="HeaderLine">
-        <div>
-            <img src="../icons/list.svg" alt="Icône Menu Burger" class="IconButton">
-        </div>
-        <a href="http://127.0.0.1:5501/html/index.html"><img src="../Image/stepup2-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogoDesktop"></a>
-        <a href="http://127.0.0.1:5501/html/index.html"><img src="../Image/stepup2-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogoMobile"></a>
-        <div class="Gender">
-            <ul>
-                <li><a href="http://127.0.0.1:5501/html/article.html">Homme</a></li>
-                <li><a href="http://127.0.0.1:5501/html/article.html">Femme</a></li>
-                <li><a href="http://127.0.0.1:5501/html/article.html">Enfant</a></li>
-                <li><a href="http://127.0.0.1:5501/html/article.html">Sports</a></li>
-            </ul>
-        </div>
-        <div>
-            <div id="Search">
-                <input id="SearchInput" type="text" placeholder="Rechercher">
-                <img src="../icons/search.svg" alt="Icône Recherche" class="IconButton">
+<body>
+    <header>
+        <div class="HeaderLine">
+            <button id="Burger"><img src="../icons/list.svg" alt="Icône Menu Burger" class="IconButton"></button>
+            <a href="http://127.0.0.1:5501/html/index.html"><img id="HouseMobile" class="IconButton" src="../icons/house.svg" alt="Retour accueil du site"></a>
+            <a href="http://127.0.0.1:5501/html/index.html"><img src="../Image/stepup2-removebg-preview.webp" alt="Logo Du Site" id="HeaderLogo"></a>
+            <div id="Gender">
+                <ul>
+                    <li><a href="http://127.0.0.1:5501/html/article.html">Homme</a></li>
+                    <li><a href="http://127.0.0.1:5501/html/article.html">Femme</a></li>
+                    <li><a href="http://127.0.0.1:5501/html/article.html">Enfant</a></li>
+                    <li><a href="http://127.0.0.1:5501/html/article.html">Sports</a></li>
+                </ul>
             </div>
-                <img src="../icons/cart.svg" alt="Icône Panier" class="IconButton">
+            <div class="RightHead">
+                <form action="/html/article.html" method="get">
+                    <input name="Search" id="SearchInput" type="text" placeholder="Rechercher">
+                </form>
+                <img src="../icons/cart.svg" alt="Icône Panier" class="IconButton">  
+            </div>
             <div id="ShowAccount">
-            </div>
-        </div> 
-    </div>
-</header>
-    <main>
-        <div id="CardContainer">
-            
+                <div class="AccountImg">
+                    <a href="http://127.0.0.1:5501/html/login.html"><img src="../icons/person.svg" alt="Icône Compte" class="IconButton"></a>   
+                </div>
+            </div> 
         </div>
-        <!-- <div class="Card">
-            <div class="CardImgDiv">
-                <img src="../Image/AIR-JORDAN-1-MID-SE.webp" alt="Image Card">
-            </div>
-            <p class="CardTitre">Montagne Chalet à Bourgpaumé</p>
-            <p class="CardDescription">Bourgpaumé - Hautes-Pyrénées<br><span class="TextNormal">8 Jours / 7 Nuits</span></p>
-        </div> -->
+    </header>
+    <main>
+        <div id="CardContainer"> 
+        </div>
         <div id="PrevNext">
             <button id="PreviousBtn"><img src="../icons/arrow-left.svg" alt="Bouton Précédent"></button>
             <input type="number" name="number" id="WherePage" placeholder="/">

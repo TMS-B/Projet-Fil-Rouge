@@ -23,7 +23,9 @@ MyForm.addEventListener("submit", async (e) => {
             // return;
         }
         localStorage.setItem("SC_account",JSON.stringify(Result[Index]));
-    } catch (error) {
+        window.location.replace("/html/index.html")
+    }catch (error) {
             document.getElementById("ErrorMessage").textContent = error.message;
     }
+
 });

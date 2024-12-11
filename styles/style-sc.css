@@ -93,14 +93,78 @@ header {
  .HeaderLine:nth-child(4) {
     flex-direction: column;
 }
-#HeaderLogoMobile{        /*Logo du site*/
-    height: 100px;
-}
-#HeaderLogoDesktop{        /*Logo du site*/
+#HeaderLogo{        /*Logo du site*/
     display: none;
 }
-.Gender {       /* Menu de séléction au centre du header "Homme,Femme,Enfant,Sport" */
+#Burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 0px;
+    /* background-color: var(--BackgroundColorDark); */
+}
+
+#Gender {       /* Menu de séléction au centre du header "Homme,Femme,Enfant,Sport" */
     display: none;
+}
+
+/* Sidenav menu */
+.SideNav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: -250px;
+    background-color: #a00000;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+  }
+  
+/* Sidenav menu links */
+.SideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.SideNav a:hover {
+    color: #111;    
+}
+
+.SideNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.SideNav.active {
+    left: 0;
+}
+
+/* Close btn */
+.SideNav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.RightHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.RightHead input{
+    width: 100px;
+    height: 25px;
 }
 main {
     width: 100%;
@@ -120,7 +184,6 @@ main {
     background-color: #00000010;
     padding: 10px;
     margin: 0;
-    /* display: flex; */
 }
 .Carousel {
     overflow: hidden;
@@ -183,7 +246,7 @@ main {
     overflow-x: scroll;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
-    margin: auto;
+    margin-bottom: 100px;
     gap: 32px;
     background-color: var(--BackgroundColor);
     padding: 16px;
@@ -246,9 +309,8 @@ main {
 
 #CardContainer{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 1fr);
     grid-row-gap: 30px;
     margin: 50px;
 }
@@ -257,6 +319,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px;
 }
 #PrevNext button{
     width: 50px;
@@ -399,21 +462,6 @@ main {
 .Container p{
     margin-bottom: 80px;
 }
-
-/* #SimpleSearchBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin: 50px auto 80px auto;
-    width: 90%;
-    border-radius: 25px;
-    padding: 10px 16px 10px 16px;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    color: var(--TextColorBright);
-    background-color: var(--BackgroundColorDark);
-} */
 
 footer {
     width: 100%;
@@ -569,7 +617,7 @@ footer {
         display: none;
     }
     header {
-        padding: 2em;
+        padding: 1em;
         gap: 16px;
     }
     .HeaderLine:nth-child(1) > :nth-child(1) {
@@ -578,13 +626,10 @@ footer {
     .HeaderLine:nth-child(n+2) {
         display:flex;
     }
-    #HeaderLogoDesktop{     /*Logo du site pour PC*/
+    #HeaderLogo{     /*Logo du site*/
         display: inline;
         width: 200px;
         height: 180px;
-    }
-    #HeaderLogoMobile{        /*Logo du site pour mobile*/
-        display: none;
     }
     #Inscription{
         display: block;
@@ -596,6 +641,21 @@ footer {
         width: 80%;
         background-color: none;
         background-color: #00000000;
+    }
+    .CarouselList {
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    #CardContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        margin: 50px;
     }
     #FooterReseauxMobile{
         display: none;
@@ -637,15 +697,30 @@ footer {
         max-width: 1000px;
         width: 90%;
     }
-    .Gender{
+    #Gender{
         display: inline;
         width: 50%;
         
     }
-    .Gender ul{
+    #Gender ul{
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 1em;
+    }
+    #CardContainer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        margin: 50px;
+    }
+    #HouseMobile{
+        display: none;
+    }
+    .RightHead input{
+        width: 150px;
+        height: 25px;
     }
 }
